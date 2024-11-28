@@ -1,0 +1,83 @@
+2024/11/09 11:20:40 successfully connected to mongoDB
+2024/11/09 11:20:41 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/11/09 12:39:08 successfully connected to mongoDB
+2024/11/09 14:49:01 successfully connected to mongoDB
+2024/11/09 14:50:30 successfully connected to mongoDB
+2024/11/09 14:52:16 error payload:  websocket: close 1001 (going away)
+2024/11/09 19:51:31 successfully connected to mongoDB
+2024/11/09 19:51:32 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/11/09 19:53:01 successfully connected to mongoDB
+2024/11/09 19:53:37 error payload:  websocket: close 1001 (going away)
+2024/11/09 19:56:49 successfully connected to mongoDB
+2024/11/09 19:57:01 error payload:  websocket: close 1001 (going away)
+2024/11/09 20:05:17 successfully connected to mongoDB
+2024/11/09 20:05:53 successfully connected to mongoDB
+2024/11/09 20:10:01 successfully connected to mongoDB
+2024/11/09 20:12:55 successfully connected to mongoDB
+2024/11/09 20:15:31 successfully connected to mongoDB
+2024/11/09 20:21:57 successfully connected to mongoDB
+2024/11/09 20:26:29 successfully connected to mongoDB
+2024/11/09 20:35:41 successfully connected to mongoDB
+2024/11/09 20:37:26 successfully connected to mongoDB
+2024/11/09 20:48:33 successfully connected to mongoDB
+2024/11/09 20:50:03 error payload:  websocket: close 1001 (going away)
+2024/11/09 20:59:50 successfully connected to mongoDB
+2024/11/09 21:00:25 successfully connected to mongoDB
+2024/11/09 21:00:38 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:02:58 successfully connected to mongoDB
+2024/11/09 21:03:06 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:04:12 successfully connected to mongoDB
+2024/11/09 21:17:17 successfully connected to mongoDB
+2024/11/09 21:19:44 successfully connected to mongoDB
+2024/11/09 21:20:53 successfully connected to mongoDB
+2024/11/09 21:22:35 successfully connected to mongoDB
+2024/11/09 21:28:58 successfully connected to mongoDB
+2024/11/09 21:29:07 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:30:12 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:33:04 successfully connected to mongoDB
+2024/11/09 21:34:22 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:38:22 successfully connected to mongoDB
+2024/11/09 21:38:33 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:38:41 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:39:09 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:48:00 successfully connected to mongoDB
+2024/11/09 21:48:25 error payload:  websocket: close 1001 (going away)
+2024/11/09 21:51:16 successfully connected to mongoDB
+2024/11/09 21:57:56 successfully connected to mongoDB
+2024/11/09 22:05:56 successfully connected to mongoDB
+2024/11/09 22:06:50 successfully connected to mongoDB
+2024/11/09 22:11:33 successfully connected to mongoDB
+2024/11/09 22:12:37 successfully connected to mongoDB
+2024/11/09 22:26:16 successfully connected to mongoDB
+2024/11/09 22:26:28 error payload:  websocket: close 1001 (going away)
+2024/11/09 22:29:02 successfully connected to mongoDB
+2024/11/09 22:30:10 successfully connected to mongoDB
+2024/11/09 22:34:34 error payload:  websocket: close 1001 (going away)
+2024/11/09 22:35:08 error payload:  websocket: close 1001 (going away)
+2024/11/09 22:40:22 successfully connected to mongoDB
+2024/11/09 22:40:56 successfully connected to mongoDB
+2024/11/09 22:41:58 error payload:  websocket: close 1001 (going away)
+2024/11/09 22:42:27 successfully connected to mongoDB
+2024/11/09 22:42:56 successfully connected to mongoDB
+2024/11/09 22:47:37 error payload:  websocket: close 1001 (going away)
+2024/11/10 11:46:09 successfully connected to mongoDB
+2024/11/10 11:46:10 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/11/10 11:48:06 successfully connected to mongoDB
+2024/11/10 15:41:37 successfully connected to mongoDB
+2024/11/10 15:42:52 successfully connected to mongoDB
+2024/11/10 15:50:06 successfully connected to mongoDB
+2024/11/10 15:52:49 successfully connected to mongoDB
+2024/11/10 16:00:41 failed to get user session on DB:  record not found
+2024/11/10 16:00:43 failed to get user session on DB:  record not found
+2024/11/10 16:00:44 error payload:  websocket: close 1001 (going away)
+2024/11/10 17:04:39 error payload:  websocket: close 1001 (going away)
+2024/11/11 10:22:30 successfully connected to mongoDB
+2024/11/11 10:26:22 successfully connected to mongoDB
+2024/11/11 10:30:31 successfully connected to mongoDB
+2024/11/11 13:33:47 successfully connected to mongoDB
+2024/11/11 13:33:48 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/11/11 13:35:16 successfully connected to mongoDB
+2024/11/11 13:38:14 successfully connected to mongoDB
+2024/11/11 13:43:43 successfully connected to mongoDB
+2024/11/11 13:43:44 failed to listen: listen tcp4 0.0.0.0:9000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/11/11 13:44:31 successfully connected to mongoDB

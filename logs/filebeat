@@ -1,0 +1,2805 @@
+2024-11-28T16:40:41.513Z	INFO	instance/beat.go:686	Home path: [/usr/share/filebeat] Config path: [/usr/share/filebeat] Data path: [/usr/share/filebeat/data] Logs path: [/usr/share/filebeat/logs] Hostfs Path: [/]
+2024-11-28T16:40:41.524Z	DEBUG	[beat]	instance/beat.go:744	Beat metadata path: /usr/share/filebeat/data/meta.json
+2024-11-28T16:40:41.529Z	INFO	instance/beat.go:694	Beat ID: 8de7feea-e35c-400e-b7a2-d895e73f3fa9
+2024-11-28T16:40:41.530Z	DEBUG	[seccomp]	seccomp/seccomp.go:117	Loading syscall filter	{"seccomp_filter": {"no_new_privs":true,"flag":"tsync","policy":{"default_action":"errno","syscalls":[{"names":["accept","accept4","access","arch_prctl","bind","brk","chmod","chown","clock_gettime","clone","clone3","close","connect","dup","dup2","epoll_create","epoll_create1","epoll_ctl","epoll_pwait","epoll_wait","exit","exit_group","fchdir","fchmod","fchmodat","fchown","fchownat","fcntl","fdatasync","flock","fstat","fstatfs","fsync","ftruncate","futex","getcwd","getdents","getdents64","geteuid","getgid","getpeername","getpid","getppid","getrandom","getrlimit","getrusage","getsockname","getsockopt","gettid","gettimeofday","getuid","inotify_add_watch","inotify_init1","inotify_rm_watch","ioctl","kill","listen","lseek","lstat","madvise","mincore","mkdirat","mmap","mprotect","munmap","nanosleep","newfstatat","open","openat","pipe","pipe2","poll","ppoll","pread64","pselect6","pwrite64","read","readlink","readlinkat","recvfrom","recvmmsg","recvmsg","rename","renameat","rt_sigaction","rt_sigprocmask","rt_sigreturn","sched_getaffinity","sched_yield","sendfile","sendmmsg","sendmsg","sendto","set_robust_list","setitimer","setsockopt","shutdown","sigaltstack","socket","splice","stat","statfs","sysinfo","tgkill","time","tkill","uname","unlink","unlinkat","wait4","waitid","write","writev"],"action":"allow"}]}}}
+2024-11-28T16:40:41.533Z	INFO	[seccomp]	seccomp/seccomp.go:124	Syscall filter successfully installed
+2024-11-28T16:40:41.533Z	INFO	[beat]	instance/beat.go:1040	Beat info	{"system_info": {"beat": {"path": {"config": "/usr/share/filebeat", "data": "/usr/share/filebeat/data", "home": "/usr/share/filebeat", "logs": "/usr/share/filebeat/logs"}, "type": "filebeat", "uuid": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"}}}
+2024-11-28T16:40:41.534Z	INFO	[beat]	instance/beat.go:1049	Build info	{"system_info": {"build": {"commit": "93708bd74e909e57ed5d9bea3cf2065f4cc43af3", "libbeat": "7.17.0", "time": "2022-01-28T09:53:30.000Z", "version": "7.17.0"}}}
+2024-11-28T16:40:41.535Z	INFO	[beat]	instance/beat.go:1052	Go runtime info	{"system_info": {"go": {"os":"linux","arch":"amd64","max_procs":8,"version":"go1.17.5"}}}
+2024-11-28T16:40:41.536Z	INFO	[beat]	instance/beat.go:1056	Host info	{"system_info": {"host": {"architecture":"x86_64","boot_time":"2024-11-28T16:39:53Z","containerized":true,"name":"4b4b01f0dfea","ip":["127.0.0.1/8","::1/128","172.20.0.7/16"],"kernel_version":"5.15.153.1-microsoft-standard-WSL2","mac":["02:42:ac:14:00:07"],"os":{"type":"linux","family":"debian","platform":"ubuntu","name":"Ubuntu","version":"20.04.3 LTS (Focal Fossa)","major":20,"minor":4,"patch":3,"codename":"focal"},"timezone":"UTC","timezone_offset_sec":0}}}
+2024-11-28T16:40:41.536Z	INFO	[beat]	instance/beat.go:1085	Process info	{"system_info": {"process": {"capabilities": {"inheritable":null,"permitted":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"effective":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"bounding":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"ambient":null}, "cwd": "/usr/share/filebeat", "exe": "/usr/share/filebeat/filebeat", "name": "filebeat", "pid": 1, "ppid": 0, "seccomp": {"mode":"filter","no_new_privs":true}, "start_time": "2024-11-28T16:40:39.780Z"}}}
+2024-11-28T16:40:41.537Z	INFO	instance/beat.go:328	Setup Beat: filebeat; Version: 7.17.0
+2024-11-28T16:40:41.537Z	DEBUG	[beat]	instance/beat.go:354	Initializing output plugins
+2024-11-28T16:40:41.539Z	DEBUG	[publisher]	pipeline/consumer.go:148	start pipeline event consumer
+2024-11-28T16:40:41.540Z	INFO	[publisher]	pipeline/module.go:113	Beat name: 4b4b01f0dfea
+2024-11-28T16:40:41.574Z	WARN	beater/filebeat.go:202	Filebeat is unable to load the ingest pipelines for the configured modules because the Elasticsearch output is not configured/enabled. If you have already loaded the ingest pipelines or are using Logstash pipelines, you can ignore this warning.
+2024-11-28T16:40:41.575Z	INFO	[monitoring]	log/log.go:142	Starting metrics logging every 30s
+2024-11-28T16:40:41.575Z	INFO	instance/beat.go:492	filebeat start running.
+2024-11-28T16:40:41.576Z	DEBUG	[test]	registrar/migrate.go:304	isFile(/usr/share/filebeat/data/registry) -> false
+2024-11-28T16:40:41.577Z	DEBUG	[test]	registrar/migrate.go:304	isFile() -> false
+2024-11-28T16:40:41.577Z	DEBUG	[test]	registrar/migrate.go:297	isDir(/usr/share/filebeat/data/registry/filebeat) -> false
+2024-11-28T16:40:41.577Z	DEBUG	[registrar]	registrar/migrate.go:84	Registry type '' found
+2024-11-28T16:40:41.577Z	DEBUG	[test]	registrar/migrate.go:304	isFile(.bak) -> false
+2024-11-28T16:40:41.583Z	INFO	memlog/store.go:119	Loading data file of '/usr/share/filebeat/data/registry/filebeat' succeeded. Active transaction id=0
+2024-11-28T16:40:41.583Z	INFO	memlog/store.go:124	Finished loading transaction log file for '/usr/share/filebeat/data/registry/filebeat'. Active transaction id=0
+2024-11-28T16:40:41.583Z	WARN	beater/filebeat.go:411	Filebeat is unable to load the ingest pipelines for the configured modules because the Elasticsearch output is not configured/enabled. If you have already loaded the ingest pipelines or are using Logstash pipelines, you can ignore this warning.
+2024-11-28T16:40:41.586Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform request:append
+2024-11-28T16:40:41.588Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform request:delete
+2024-11-28T16:40:41.588Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform request:set
+2024-11-28T16:40:41.588Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform response:append
+2024-11-28T16:40:41.588Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform response:delete
+2024-11-28T16:40:41.588Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform response:set
+2024-11-28T16:40:41.589Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform pagination:append
+2024-11-28T16:40:41.589Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform pagination:delete
+2024-11-28T16:40:41.589Z	DEBUG	[httpjson.transforms]	v2/transform_registry.go:75	Register transform pagination:set
+2024-11-28T16:40:41.589Z	DEBUG	[httpjson.transforms]	v2/encoding.go:80	<nil>
+2024-11-28T16:40:41.589Z	DEBUG	[httpjson.transforms]	v2/encoding.go:81	<nil>
+2024-11-28T16:40:41.589Z	DEBUG	[httpjson.transforms]	v2/encoding.go:86	<nil>
+2024-11-28T16:40:41.590Z	DEBUG	[httpjson.transforms]	v2/encoding.go:87	<nil>
+2024-11-28T16:40:41.590Z	INFO	[registrar]	registrar/registrar.go:109	States Loaded from registrar: 0
+2024-11-28T16:40:41.590Z	DEBUG	[registrar]	registrar/registrar.go:140	Starting Registrar
+2024-11-28T16:40:41.590Z	INFO	[crawler]	beater/crawler.go:71	Loading Inputs: 1
+2024-11-28T16:40:41.591Z	WARN	[cfgwarn]	log/input.go:89	DEPRECATED: Log input. Use Filestream input instead.
+2024-11-28T16:40:41.592Z	DEBUG	[input]	log/config.go:207	recursive glob enabled
+2024-11-28T16:40:41.593Z	DEBUG	[input]	log/input.go:185	exclude_files: []. Number of states: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:41.593Z	DEBUG	[input]	log/input.go:215	input with previous states loaded: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:41.593Z	INFO	[input]	log/input.go:171	Configured paths: [/usr/share/filebeat/logs/*.log]	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:41.594Z	INFO	[crawler]	beater/crawler.go:141	Starting input (ID: 3799707056627177255)
+2024-11-28T16:40:41.594Z	INFO	[crawler]	beater/crawler.go:108	Loading and starting Inputs completed. Enabled inputs: 1
+2024-11-28T16:40:41.595Z	DEBUG	[input]	log/input.go:222	Start next scan	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:41.600Z	DEBUG	[input]	log/input.go:472	Check file for harvesting: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:41.600Z	DEBUG	[input]	log/input.go:550	Start harvester for new file: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86"}
+2024-11-28T16:40:41.620Z	DEBUG	[input.harvester]	log/harvester.go:596	Setting offset to: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:41.620Z	DEBUG	[input.harvester]	log/harvester.go:582	Setting offset: 0 	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:41.620Z	DEBUG	[input.harvester]	log/harvester.go:657	newLogFileReader with config.MaxBytes: 10485760	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:41.621Z	DEBUG	[input.harvester]	log/harvester.go:212	Harvester setup successful. Line terminator: 1	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:41.621Z	DEBUG	[acker]	beater/acker.go:59	stateful ack	{"count": 1}
+2024-11-28T16:40:41.621Z	DEBUG	[publisher]	pipeline/client.go:231	Pipeline client receives callback 'onFilteredOut' for event: {Timestamp:0001-01-01 00:00:00 +0000 UTC Meta:null Fields:null Private:{Id:native::6755399441987923-86 PrevId: Finished:false Fileinfo:0xc00097a270 Source:/usr/share/filebeat/logs/messaging_app.log Offset:0 Timestamp:2024-11-28 16:40:41.600474799 +0000 UTC m=+0.195990443 TTL:-1ns Type:log Meta:map[] FileStateOS:6755399441987923-86 IdentifierName:native} TimeSeries:false}
+2024-11-28T16:40:41.621Z	DEBUG	[registrar]	registrar/registrar.go:263	Processing 1 events
+2024-11-28T16:40:41.621Z	DEBUG	[input.harvester]	log/harvester.go:491	Update state (offset: 0).	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:41.621Z	DEBUG	[input]	file/states.go:68	New state added for /usr/share/filebeat/logs/messaging_app.log
+2024-11-28T16:40:41.623Z	DEBUG	[registrar]	registrar/registrar.go:230	Registrar state updates processed. Count: 1
+2024-11-28T16:40:41.622Z	DEBUG	[input]	file/states.go:68	New state added for /usr/share/filebeat/logs/messaging_app.log
+2024-11-28T16:40:41.623Z	DEBUG	[input]	log/input.go:286	input states cleaned up. Before: 1, After: 1, Pending: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:41.623Z	INFO	[input.harvester]	log/harvester.go:309	Harvester started for file.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:41.626Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.625Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 0,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 11:20:40 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.627Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.627Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "message": "2024/11/09 11:20:41 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.",
+  "log": {
+    "offset": 54,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  }
+}
+2024-11-28T16:40:41.627Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.627Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 12:39:08 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 217,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  }
+}
+2024-11-28T16:40:41.626Z	DEBUG	[registrar]	registrar/registrar.go:205	Registry file updated. 1 active states.
+2024-11-28T16:40:41.627Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.627Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 271,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 14:49:01 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.628Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.628Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 325,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 14:50:30 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.628Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.628Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 379,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 14:52:16 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.628Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.628Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 450,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 19:51:31 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.628Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.628Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 504
+  },
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "message": "2024/11/09 19:51:32 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+}
+2024-11-28T16:40:41.628Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.628Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 19:53:01 successfully connected to mongoDB",
+  "log": {
+    "offset": 667,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.629Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.629Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 721,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 19:53:37 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.629Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.629Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 792,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 19:56:49 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.629Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.629Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 846
+  },
+  "message": "2024/11/09 19:57:01 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.629Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.629Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 917,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:05:17 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.630Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.630Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 971,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:05:53 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.630Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.630Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 1025,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:10:01 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  }
+}
+2024-11-28T16:40:41.630Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.630Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  },
+  "message": "2024/11/09 20:12:55 successfully connected to mongoDB",
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 1079
+  },
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.630Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.630Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 1133,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:15:31 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.630Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.630Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 1187,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:21:57 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.631Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.630Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 1241
+  },
+  "message": "2024/11/09 20:26:29 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.631Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.631Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "log": {
+    "offset": 1295,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:35:41 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.631Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.631Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 1349,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:37:26 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.631Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.631Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 1403,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:48:33 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.633Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.633Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 1457,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:50:03 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.633Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.633Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 1528,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 20:59:50 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.633Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.633Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 21:00:25 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 1582
+  }
+}
+2024-11-28T16:40:41.634Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.634Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 21:00:38 error payload:  websocket: close 1001 (going away)",
+  "log": {
+    "offset": 1636,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.634Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.634Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 1707,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:02:58 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.634Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.634Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 1761,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:03:06 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.635Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.635Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 1832,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:04:12 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.635Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.635Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 1886,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:17:17 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.635Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.635Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 1940,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:19:44 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.635Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.635Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 1994,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:20:53 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.635Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.635Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 2048,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:22:35 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.636Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.636Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 2102
+  },
+  "message": "2024/11/09 21:28:58 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.636Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.636Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 2156,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:29:07 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.636Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.636Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 2227
+  },
+  "message": "2024/11/09 21:30:12 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.636Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.636Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 2298,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:33:04 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.636Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.636Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 21:34:22 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 2352
+  }
+}
+2024-11-28T16:40:41.637Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.636Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 2423
+  },
+  "message": "2024/11/09 21:38:22 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.637Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.637Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 2477,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:38:33 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  }
+}
+2024-11-28T16:40:41.637Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.637Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 2548,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:38:41 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.637Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.637Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 2619,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:39:09 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.637Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.637Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "log": {
+    "offset": 2690,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:48:00 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.637Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.637Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 21:48:25 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 2744,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  }
+}
+2024-11-28T16:40:41.638Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.637Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 2815,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:51:16 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.638Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.638Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 2869,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 21:57:56 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.638Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.638Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 2923,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:05:56 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.639Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.639Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 2977,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:06:50 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.639Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.639Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3031,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:11:33 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.639Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.639Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 3085,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:12:37 successfully connected to mongoDB"
+}
+2024-11-28T16:40:41.640Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.640Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 3139
+  },
+  "message": "2024/11/09 22:26:16 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.640Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.640Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3193,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:26:28 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.640Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.640Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3264,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:29:02 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.640Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.640Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  },
+  "log": {
+    "offset": 3318,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:30:10 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.640Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.640Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 3372
+  },
+  "message": "2024/11/09 22:34:34 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.641Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.641Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 22:35:08 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 3443
+  }
+}
+2024-11-28T16:40:41.641Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.641Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3514,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:40:22 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  }
+}
+2024-11-28T16:40:41.641Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.641Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3568,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:40:56 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.641Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.641Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 22:41:58 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 3622,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  }
+}
+2024-11-28T16:40:41.641Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.641Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3693,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:42:27 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  }
+}
+2024-11-28T16:40:41.642Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.642Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 3747,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/09 22:42:56 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.642Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.642Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/09 22:47:37 error payload:  websocket: close 1001 (going away)",
+  "log": {
+    "offset": 3801,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.642Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.642Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 3872,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/10 11:46:09 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.642Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.642Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/10 11:46:10 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.",
+  "log": {
+    "offset": 3926,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  }
+}
+2024-11-28T16:40:41.643Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.642Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 4089,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/10 11:48:06 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.643Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.643Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  },
+  "message": "2024/11/10 15:41:37 successfully connected to mongoDB",
+  "log": {
+    "offset": 4143,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.643Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.643Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 4197
+  },
+  "message": "2024/11/10 15:42:52 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9"
+  }
+}
+2024-11-28T16:40:41.643Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.643Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 4251,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/10 15:50:06 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.643Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.643Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 4305
+  },
+  "message": "2024/11/10 15:52:49 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  }
+}
+2024-11-28T16:40:41.644Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.644Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/10 16:00:41 failed to get user session on DB:  record not found",
+  "log": {
+    "offset": 4359,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  }
+}
+2024-11-28T16:40:41.644Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.644Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 4431,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/10 16:00:43 failed to get user session on DB:  record not found",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  }
+}
+2024-11-28T16:40:41.644Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.644Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "log": {
+    "offset": 4503,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/10 16:00:44 error payload:  websocket: close 1001 (going away)"
+}
+2024-11-28T16:40:41.644Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.644Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 4574,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/10 17:04:39 error payload:  websocket: close 1001 (going away)",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.644Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.644Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 4645
+  },
+  "message": "2024/11/11 10:22:30 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.645Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.645Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 4699,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/11 10:26:22 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.645Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.645Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 4753,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/11 10:30:31 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.645Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.645Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat"
+  },
+  "log": {
+    "offset": 4807,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/11 13:33:47 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  }
+}
+2024-11-28T16:40:41.645Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.645Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "log": {
+    "offset": 4861,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/11 13:33:48 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.645Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.645Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "message": "2024/11/11 13:35:16 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 5024,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  }
+}
+2024-11-28T16:40:41.646Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.646Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "message": "2024/11/11 13:38:14 successfully connected to mongoDB",
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 5078
+  }
+}
+2024-11-28T16:40:41.646Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.646Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0"
+  },
+  "log": {
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    },
+    "offset": 5132
+  },
+  "message": "2024/11/11 13:43:43 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.646Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.646Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "agent": {
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db",
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  },
+  "log": {
+    "offset": 5186,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/11 13:43:44 failed to listen: listen tcp4 0.0.0.0:9000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.",
+  "input": {
+    "type": "log"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  }
+}
+2024-11-28T16:40:41.646Z	DEBUG	[processors]	processing/processors.go:203	Publish event: {
+  "@timestamp": "2024-11-28T16:40:41.646Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.17.0"
+  },
+  "host": {
+    "name": "4b4b01f0dfea"
+  },
+  "agent": {
+    "id": "8de7feea-e35c-400e-b7a2-d895e73f3fa9",
+    "name": "4b4b01f0dfea",
+    "type": "filebeat",
+    "version": "7.17.0",
+    "hostname": "4b4b01f0dfea",
+    "ephemeral_id": "766f2ff3-030c-4b12-abcf-c899b54a79db"
+  },
+  "log": {
+    "offset": 5349,
+    "file": {
+      "path": "/usr/share/filebeat/logs/messaging_app.log"
+    }
+  },
+  "message": "2024/11/11 13:44:31 successfully connected to mongoDB",
+  "input": {
+    "type": "log"
+  },
+  "ecs": {
+    "version": "1.12.0"
+  }
+}
+2024-11-28T16:40:41.647Z	DEBUG	[input.harvester]	log/log.go:111	End of file reached: /usr/share/filebeat/logs/messaging_app.log; Backoff now.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:42.636Z	INFO	[publisher_pipeline_output]	pipeline/output.go:143	Connecting to backoff(async(tcp://logstash:5044))
+2024-11-28T16:40:42.646Z	INFO	[publisher]	pipeline/retry.go:219	retryer: send unwait signal to consumer
+2024-11-28T16:40:42.730Z	INFO	[publisher]	pipeline/retry.go:223	  done
+2024-11-28T16:40:42.703Z	DEBUG	[logstash]	logstash/async.go:120	connect
+2024-11-28T16:40:42.818Z	DEBUG	[input.harvester]	log/log.go:111	End of file reached: /usr/share/filebeat/logs/messaging_app.log; Backoff now.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:44.030Z	ERROR	[publisher_pipeline_output]	pipeline/output.go:154	Failed to connect to backoff(async(tcp://logstash:5044)): dial tcp 172.20.0.5:5044: connect: connection refused
+2024-11-28T16:40:44.033Z	INFO	[publisher_pipeline_output]	pipeline/output.go:145	Attempting to reconnect to backoff(async(tcp://logstash:5044)) with 1 reconnect attempt(s)
+2024-11-28T16:40:44.033Z	INFO	[publisher]	pipeline/retry.go:219	retryer: send unwait signal to consumer
+2024-11-28T16:40:44.033Z	DEBUG	[logstash]	logstash/async.go:120	connect
+2024-11-28T16:40:44.034Z	INFO	[publisher]	pipeline/retry.go:223	  done
+2024-11-28T16:40:44.898Z	DEBUG	[input.harvester]	log/log.go:111	End of file reached: /usr/share/filebeat/logs/messaging_app.log; Backoff now.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:47.900Z	ERROR	[publisher_pipeline_output]	pipeline/output.go:154	Failed to connect to backoff(async(tcp://logstash:5044)): dial tcp 172.20.0.5:5044: connect: connection refused
+2024-11-28T16:40:47.900Z	INFO	[publisher_pipeline_output]	pipeline/output.go:145	Attempting to reconnect to backoff(async(tcp://logstash:5044)) with 2 reconnect attempt(s)
+2024-11-28T16:40:47.901Z	DEBUG	[logstash]	logstash/async.go:120	connect
+2024-11-28T16:40:47.901Z	INFO	[publisher]	pipeline/retry.go:219	retryer: send unwait signal to consumer
+2024-11-28T16:40:47.901Z	INFO	[publisher]	pipeline/retry.go:223	  done
+2024-11-28T16:40:48.900Z	DEBUG	[input.harvester]	log/log.go:111	End of file reached: /usr/share/filebeat/logs/messaging_app.log; Backoff now.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:40:51.630Z	DEBUG	[input]	input/input.go:139	Run input
+2024-11-28T16:40:51.643Z	DEBUG	[input]	log/input.go:222	Start next scan	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:51.679Z	DEBUG	[input]	log/input.go:472	Check file for harvesting: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:51.718Z	DEBUG	[input]	log/input.go:570	Update existing file for harvesting: /usr/share/filebeat/logs/messaging_app.log, offset: 5403	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "old_source": "/usr/share/filebeat/logs/messaging_app.log", "old_finished": false, "old_os_id": "6755399441987923-86"}
+2024-11-28T16:40:51.722Z	DEBUG	[input]	log/input.go:623	Harvester for file is still running: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "old_source": "/usr/share/filebeat/logs/messaging_app.log", "old_finished": false, "old_os_id": "6755399441987923-86"}
+2024-11-28T16:40:51.723Z	DEBUG	[input]	log/input.go:286	input states cleaned up. Before: 1, After: 1, Pending: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:40:52.110Z	ERROR	[publisher_pipeline_output]	pipeline/output.go:154	Failed to connect to backoff(async(tcp://logstash:5044)): dial tcp 172.20.0.5:5044: connect: connection refused
+2024-11-28T16:40:52.112Z	INFO	[publisher_pipeline_output]	pipeline/output.go:145	Attempting to reconnect to backoff(async(tcp://logstash:5044)) with 3 reconnect attempt(s)
+2024-11-28T16:40:52.112Z	DEBUG	[logstash]	logstash/async.go:120	connect
+2024-11-28T16:40:52.112Z	INFO	[publisher]	pipeline/retry.go:219	retryer: send unwait signal to consumer
+2024-11-28T16:40:52.114Z	INFO	[publisher]	pipeline/retry.go:223	  done
+2024-11-28T16:40:56.915Z	DEBUG	[input.harvester]	log/log.go:111	End of file reached: /usr/share/filebeat/logs/messaging_app.log; Backoff now.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:01.729Z	DEBUG	[input]	input/input.go:139	Run input
+2024-11-28T16:41:01.731Z	DEBUG	[input]	log/input.go:222	Start next scan	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:41:01.736Z	DEBUG	[input]	log/input.go:472	Check file for harvesting: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:41:01.738Z	DEBUG	[input]	log/input.go:570	Update existing file for harvesting: /usr/share/filebeat/logs/messaging_app.log, offset: 5403	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "old_source": "/usr/share/filebeat/logs/messaging_app.log", "old_finished": false, "old_os_id": "6755399441987923-86"}
+2024-11-28T16:41:01.739Z	DEBUG	[input]	log/input.go:623	Harvester for file is still running: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "old_source": "/usr/share/filebeat/logs/messaging_app.log", "old_finished": false, "old_os_id": "6755399441987923-86"}
+2024-11-28T16:41:01.739Z	DEBUG	[input]	log/input.go:286	input states cleaned up. Before: 1, After: 1, Pending: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:41:06.921Z	DEBUG	[input.harvester]	log/log.go:111	End of file reached: /usr/share/filebeat/logs/messaging_app.log; Backoff now.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:07.947Z	ERROR	[publisher_pipeline_output]	pipeline/output.go:154	Failed to connect to backoff(async(tcp://logstash:5044)): dial tcp 172.20.0.5:5044: connect: connection refused
+2024-11-28T16:41:07.948Z	INFO	[publisher_pipeline_output]	pipeline/output.go:145	Attempting to reconnect to backoff(async(tcp://logstash:5044)) with 4 reconnect attempt(s)
+2024-11-28T16:41:07.948Z	DEBUG	[logstash]	logstash/async.go:120	connect
+2024-11-28T16:41:07.948Z	INFO	[publisher]	pipeline/retry.go:219	retryer: send unwait signal to consumer
+2024-11-28T16:41:07.949Z	INFO	[publisher]	pipeline/retry.go:223	  done
+2024-11-28T16:41:11.708Z	DEBUG	cgroup/util.go:276	PID 1 contains a cgroups V2 path (0::/docker/4b4b01f0dfea97a54c6e393f62f5fbd71ec512704e941b3470ebd24d14cc6a6b) but no V2 mountpoint was found.
+This may be because metricbeat is running inside a container on a hybrid system.
+To monitor cgroups V2 processess in this way, mount the unified (V2) hierarchy inside
+the container as /sys/fs/cgroup/unified and start metricbeat with --system.hostfs.
+2024-11-28T16:41:11.723Z	INFO	[monitoring]	log/log.go:184	Non-zero metrics in the last 30s	{"monitoring": {"metrics": {"beat":{"cgroup":{"cpu":{"cfs":{"period":{"us":100000}},"id":"/"},"cpuacct":{"id":"/","total":{"ns":868251300}},"memory":{"id":"/","mem":{"limit":{"bytes":9223372036854771712},"usage":{"bytes":164122624}}}},"cpu":{"system":{"ticks":250,"time":{"ms":259}},"total":{"ticks":600,"time":{"ms":621},"value":600},"user":{"ticks":350,"time":{"ms":362}}},"handles":{"limit":{"hard":1048576,"soft":1048576},"open":11},"info":{"ephemeral_id":"766f2ff3-030c-4b12-abcf-c899b54a79db","uptime":{"ms":30187},"version":"7.17.0"},"memstats":{"gc_next":19000672,"memory_alloc":10540120,"memory_sys":42025992,"memory_total":56339392,"rss":124542976},"runtime":{"goroutines":39}},"filebeat":{"events":{"active":83,"added":84,"done":1},"harvester":{"open_files":1,"running":1,"started":1}},"libbeat":{"config":{"module":{"running":0}},"output":{"events":{"active":0},"type":"logstash"},"pipeline":{"clients":1,"events":{"active":83,"filtered":1,"published":83,"retry":332,"total":84},"queue":{"max_events":4096}}},"registrar":{"states":{"current":1,"update":1},"writes":{"success":1,"total":1}},"system":{"cpu":{"cores":8},"load":{"1":3.37,"15":0.28,"5":0.85,"norm":{"1":0.4213,"15":0.035,"5":0.1063}}}}}}
+2024-11-28T16:41:11.740Z	DEBUG	[input]	input/input.go:139	Run input
+2024-11-28T16:41:11.747Z	DEBUG	[input]	log/input.go:222	Start next scan	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:41:11.750Z	DEBUG	[input]	log/input.go:472	Check file for harvesting: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:41:11.750Z	DEBUG	[input]	log/input.go:570	Update existing file for harvesting: /usr/share/filebeat/logs/messaging_app.log, offset: 5403	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "old_source": "/usr/share/filebeat/logs/messaging_app.log", "old_finished": false, "old_os_id": "6755399441987923-86"}
+2024-11-28T16:41:11.752Z	DEBUG	[input]	log/input.go:623	Harvester for file is still running: /usr/share/filebeat/logs/messaging_app.log	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "old_source": "/usr/share/filebeat/logs/messaging_app.log", "old_finished": false, "old_os_id": "6755399441987923-86"}
+2024-11-28T16:41:11.753Z	DEBUG	[input]	log/input.go:286	input states cleaned up. Before: 1, After: 1, Pending: 0	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4"}
+2024-11-28T16:41:12.218Z	DEBUG	[service]	service/service.go:54	Received sigterm/sigint, stopping
+2024-11-28T16:41:12.221Z	INFO	beater/filebeat.go:545	Stopping filebeat
+2024-11-28T16:41:12.246Z	INFO	beater/crawler.go:148	Stopping Crawler
+2024-11-28T16:41:12.250Z	INFO	beater/crawler.go:158	Stopping 1 inputs
+2024-11-28T16:41:12.253Z	INFO	[crawler]	beater/crawler.go:163	Stopping input: 3799707056627177255
+2024-11-28T16:41:12.253Z	INFO	input/input.go:136	input ticker stopped
+2024-11-28T16:41:12.265Z	INFO	[input.harvester]	log/harvester.go:336	Reader was closed. Closing.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:12.266Z	DEBUG	[input.harvester]	log/harvester.go:617	Stopping harvester.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:12.275Z	DEBUG	[input.harvester]	log/harvester.go:627	Closing file	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:12.277Z	DEBUG	[input.harvester]	log/harvester.go:491	Update state (offset: 5403).	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:12.278Z	DEBUG	[input.harvester]	log/harvester.go:638	harvester cleanup finished.	{"input_id": "1a54f913-1af0-46b4-883a-96a880d4ddf4", "source": "/usr/share/filebeat/logs/messaging_app.log", "state_id": "native::6755399441987923-86", "finished": false, "os_id": "6755399441987923-86", "harvester_id": "b2f332e6-a515-4313-a65c-73a9daa97aac"}
+2024-11-28T16:41:12.282Z	DEBUG	[publisher]	pipeline/client.go:158	client: closing acker
+2024-11-28T16:41:12.283Z	DEBUG	[publisher]	pipeline/client.go:163	client: done closing acker
+2024-11-28T16:41:12.284Z	DEBUG	[publisher]	pipeline/client.go:165	client: unlink from queue
+2024-11-28T16:41:12.284Z	DEBUG	[publisher]	pipeline/client.go:187	client: cancelled 0 events
+2024-11-28T16:41:12.285Z	DEBUG	[publisher]	pipeline/client.go:167	client: done unlink
+2024-11-28T16:41:12.285Z	DEBUG	[publisher]	pipeline/client.go:170	client: closing processors
+2024-11-28T16:41:12.289Z	DEBUG	[publisher]	pipeline/client.go:175	client: done closing processors
+2024-11-28T16:41:12.290Z	INFO	beater/crawler.go:178	Crawler stopped
+2024-11-28T16:41:12.290Z	INFO	[registrar]	registrar/registrar.go:132	Stopping Registrar
+2024-11-28T16:41:12.292Z	INFO	[registrar]	registrar/registrar.go:166	Ending Registrar
+2024-11-28T16:41:12.329Z	DEBUG	[registrar]	registrar/registrar.go:167	Stopping Registrar
+2024-11-28T16:41:12.340Z	INFO	[registrar]	registrar/registrar.go:137	Registrar stopped
+2024-11-28T16:41:12.382Z	DEBUG	cgroup/util.go:276	PID 1 contains a cgroups V2 path (0::/docker/4b4b01f0dfea97a54c6e393f62f5fbd71ec512704e941b3470ebd24d14cc6a6b) but no V2 mountpoint was found.
+This may be because metricbeat is running inside a container on a hybrid system.
+To monitor cgroups V2 processess in this way, mount the unified (V2) hierarchy inside
+the container as /sys/fs/cgroup/unified and start metricbeat with --system.hostfs.
+2024-11-28T16:41:12.393Z	INFO	[monitoring]	log/log.go:192	Total metrics	{"monitoring": {"metrics": {"beat":{"cgroup":{"cpu":{"cfs":{"period":{"us":100000},"quota":{"us":0}},"id":"/","stats":{"periods":0,"throttled":{"ns":0,"periods":0}}},"cpuacct":{"id":"/","total":{"ns":981204300}},"memory":{"id":"/","mem":{"limit":{"bytes":9223372036854771712},"usage":{"bytes":164290560}}}},"cpu":{"system":{"ticks":280,"time":{"ms":290}},"total":{"ticks":730,"time":{"ms":743},"value":730},"user":{"ticks":450,"time":{"ms":453}}},"handles":{"limit":{"hard":1048576,"soft":1048576},"open":9},"info":{"ephemeral_id":"766f2ff3-030c-4b12-abcf-c899b54a79db","uptime":{"ms":30976},"version":"7.17.0"},"memstats":{"gc_next":19000672,"memory_alloc":11162088,"memory_sys":42025992,"memory_total":56961360,"rss":125472768},"runtime":{"goroutines":20}},"filebeat":{"events":{"active":83,"added":84,"done":1},"harvester":{"closed":1,"open_files":0,"running":0,"skipped":0,"started":1},"input":{"log":{"files":{"renamed":0,"truncated":0}},"netflow":{"flows":0,"packets":{"dropped":0,"received":0}}}},"libbeat":{"config":{"module":{"running":0,"starts":0,"stops":0},"reloads":0,"scans":0},"output":{"events":{"acked":0,"active":0,"batches":0,"dropped":0,"duplicates":0,"failed":0,"toomany":0,"total":0},"read":{"bytes":0,"errors":0},"type":"logstash","write":{"bytes":0,"errors":0}},"pipeline":{"clients":0,"events":{"active":83,"dropped":0,"failed":0,"filtered":1,"published":83,"retry":332,"total":84},"queue":{"acked":0,"max_events":4096}}},"registrar":{"states":{"cleanup":0,"current":1,"update":1},"writes":{"fail":0,"success":1,"total":1}},"system":{"cpu":{"cores":8},"load":{"1":3.37,"15":0.28,"5":0.85,"norm":{"1":0.4213,"15":0.035,"5":0.1063}}}}}}
+2024-11-28T16:41:12.396Z	INFO	[monitoring]	log/log.go:193	Uptime: 30.97950347s
+2024-11-28T16:41:12.396Z	INFO	[monitoring]	log/log.go:160	Stopping metrics logging.
+2024-11-28T16:41:12.399Z	INFO	instance/beat.go:498	filebeat stopped.

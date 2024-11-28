@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Messaging App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #818cf8;
+            --background-color: #f3f4f6;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Login Form Styles */
+        #login-form {
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.2s;
+        }
+
+        #login-form:hover {
+            transform: translateY(-2px);
+        }
+
+        #login-form h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Dashboard Styles */
+        #dashboard {
+            display: none;
+            height: 100vh;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .header h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        /* Chat Box Styles */
+        #chat-box {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background-color: var(--background-color);
+        }
+
+        #messages {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #messages li {
+            max-width: 48%;
+            margin: 0.5rem 0;
+            padding: 0.75rem 1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px var(--shadow-color);
+            line-height: 1.4;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        #messages li.user-message {
+            background: var(--secondary-color);
+            color: white;
+            margin-left: auto;
+            margin-right: 0; /* Keeps the message on the right */
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 0;
+        }
+
+        /* Style for messages from others */
+        #messages li.other-message {
+            background: white;
+            color: black;
+            margin-right: auto;
+            margin-left: 0; /* Keeps the message on the left */
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 0;
+        }
+
+        /* Chat Controls Styles */
+        #chat-controls {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid var(--border-color);
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        #message-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Button Styles */
+        button {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #5a67d8;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary-color);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #login-form {
+                margin: 20px;
+                width: auto;
+            }
+
+            .header {
+                padding: 0.75rem 1rem;
+            }
+
+
+            button {
+                padding: 0.75rem 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div id="login-form">
+    <h2 id="login-status">Login</h2>
+    <div class="input-group">
+        <input type="text" id="username" placeholder="Username">
+    </div>
+    <div class="input-group">
+        <input type="password" id="password" placeholder="Password">
+    </div>
+    <button onclick="login()">Login</button>
+    <div class="links">
+        <a href="#" onclick="redirectToRegister(event)" class="link">Don't have an account? Register</a>
+    </div>
+</div>
+
+<div id="dashboard">
+    <div class="header">
+        <h2>Chat Room</h2>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="chat-box">
+        <ul id="messages">
+            <!-- Chat messages will appear here -->
+        </ul>
+    </div>
+
+    <div id="chat-controls">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    let socket;
+    let pendingMessages = [];
+    let retryLogoutCount = 0;
+
+    // Check if JWT is stored in sessionStorage
+    document.addEventListener('DOMContentLoaded', function() {
+        if ('Notification' in window) {
+            if (Notification.permission === 'granted') {
+                console.log("Notification permission already granted.");
+            } else if (Notification.permission !== 'denied') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        console.log("Notification permission granted.");
+                    }
+                });
+            }
+        } else {
+            console.log('This browser does not support notifications.');
+        }
+
+        const storedToken = sessionStorage.getItem('jwtToken');
+        if (storedToken) {
+            showDashboard();
+            setupWebSocket();
+        }
+    });
+
+    // Login function
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        fetch('/user/v1/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "success" && data.data.token) {
+                    sessionStorage.setItem('jwtToken', data.data.token);
+                    sessionStorage.setItem('refreshToken', data.data.refresh_token);
+                    sessionStorage.setItem('username', data.data.username);
+                    sessionStorage.setItem('fullname', data.data.full_name);
+                    document.getElementById('login-status').innerText = 'Login successful!';
+                    showDashboard();
+                    setupWebSocket();
+                } else {
+                    alert(data.message)
+                }
+            })
+            .catch(err => {
+                alert(err)
+            });
+    }
+    function redirectToRegister() {
+        fetch('/register', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    // Handle successful response here
+                    // For example, you can redirect to the registration page or handle data.
+                    window.location.href = "/register"; // Redirect if necessary
+                } else {
+                    // Handle errors here
+                    console.error('Failed to load register page');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    // Logout function
+    function logout() {
+        fetch('/user/v1/logout', {
+            method: 'DELETE',
+            headers: {
+                'Authorization': sessionStorage.getItem('jwtToken')
+            }
+        })
+            .then(response => {
+                if (response.status === 401) {
+                    retryLogoutCount++;
+                    if (retryLogoutCount <= 3) {
+                        return refreshToken().then(() => logout());
+                    }
+                    throw new Error("Max retry limit reached for logout.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.message === "success") {
+                    sessionStorage.removeItem('jwtToken');
+                    sessionStorage.removeItem('refreshToken');
+                    sessionStorage.removeItem('username');
+                    sessionStorage.removeItem('fullname');
+                    window.alert("Logout successful!");
+                    location.reload();
+                } else {
+                    window.alert("Logout failed!");
+                }
+            })
+            .catch(err => {
+                window.alert("Logout failed!");
+            });
+    }
+
+    function refreshToken() {
+        return fetch('/user/v1/refresh-token', {
+            method: 'POST',
+            headers: {
+                'Authorization': sessionStorage.getItem('refreshToken')
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "success" && data.data.token) {
+                    sessionStorage.setItem('jwtToken', data.data.token);
+                }
+            })
+            .catch(err => {
+                console.error('Error refreshing token:', err);
+            });
+    }
+
+    function fetchMessageHistory() {
+        fetch('/message/v1/history', {
+            method: 'GET',
+            headers: {
+                'Authorization': `${sessionStorage.getItem('jwtToken')}`
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                data.data.forEach(message => {
+                    addMessageToChat(message.from, message.message);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+
+    function setupWebSocket() {
+        const appName = "{{ .awsPublicIP }}";
+        socket = new WebSocket(`ws://${appName}:9000/message/v1/send`);
+
+        socket.onopen = function(event) {
+            console.log('Connected to WebSocket server.');
+            fetchMessageHistory()
+            pendingMessages.forEach(message => {
+                socket.send(message);
+            });
+            pendingMessages = [];
+        };
+
+        socket.onmessage = function(event) {
+            const message = JSON.parse(event.data);
+            showNotification(message.from, message.message);
+            addMessageToChat(message.from, message.message);
+        };
+
+        socket.onclose = function(event) {
+            console.log('Disconnected from WebSocket server.');
+        };
+
+        socket.onerror = function(error) {
+            console.error('WebSocket error:', error);
+        };
+    }
+
+    function showNotification(title, message) {
+        if (Notification.permission === "granted") {
+            const notification = new Notification(title, {
+                body: message
+            });
+
+            notification.onclick = function() {
+                window.focus();
+            };
+        }
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('message-input');
+        const message = input.value;
+
+        if (message.trim() !== '') {
+            const msgObject = {
+                from: sessionStorage.getItem('fullname'),
+                message: message
+            };
+
+            const messageToSend = JSON.stringify(msgObject);
+
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send(messageToSend);
+            } else {
+                pendingMessages.push(messageToSend);
+            }
+
+            input.value = '';
+        }
+    }
+
+    function addMessageToChat(from, message) {
+        const messagesList = document.getElementById('messages');
+        const newMessage = document.createElement('li');
+
+        const currentUser = sessionStorage.getItem('fullname');
+        if (from === currentUser) {  // Replace 'You' with the actual username or identifier of the current user
+            newMessage.classList.add('user-message');
+        } else {
+            newMessage.classList.add('other-message');
+        }
+
+        newMessage.innerHTML  = `<strong>${from}</strong> <br> ${message}`;
+        messagesList.appendChild(newMessage);
+
+        const chatBox = document.getElementById('chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function showDashboard() {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'flex';
+    }
+
+    // Add event listener for Enter key in message input
+    document.getElementById('message-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // Add event listener for Enter key in login form
+    document.getElementById('password').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            login();
+        }
+    });
+</script>
+</body>
+</html>
