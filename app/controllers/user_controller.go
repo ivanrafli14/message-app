@@ -13,10 +13,17 @@ import (
 	"time"
 )
 
+// @Description Register a new user
+// @Tags        User Authentication
+// @Accept      json
+// @Produce     json
+// @Param       body body models.User true "User Data"
+// @Success     201 {object} models.User "User Created Successfully"
+// @Failure		500 {object} response.Response
+// @Router      /user/v1/register [post]
 func Register(ctx *fiber.Ctx) error {
 	span, spanCtx := apm.StartSpan(ctx.Context(), "Register", "controller")
 	defer span.End()
-
 	user := new(models.User)
 	err := ctx.BodyParser(user)
 	if err != nil {
@@ -51,6 +58,15 @@ func Register(ctx *fiber.Ctx) error {
 
 }
 
+// @Description User login
+// @Tags        User Authentication
+// @Accept      json
+// @Produce     json
+// @Param       body body models.LoginRequest true "User Data"
+// @Success     200 {object} models.LoginResponse
+// @Failure		400 {object} response.Response
+// @Failure		404 {object} response.Response
+// @Router      /user/v1/login [post]
 func Login(ctx *fiber.Ctx) error {
 	span, spanCtx := apm.StartSpan(ctx.Context(), "Login", "controller")
 	defer span.End()
@@ -116,6 +132,13 @@ func Login(ctx *fiber.Ctx) error {
 	return response.SendSuccessResponse(ctx, resp)
 }
 
+// @Description Logout
+// @Tags        User Authentication
+// @Param Authorization header string true "Bearer token" default(Bearer <token>)
+// @Success     200 {object} response.Response
+// @Failure 	401 {object} response.Response
+// @Failure		500 {object} response.Response
+// @Router      /user/v1/logout [delete]
 func Logout(ctx *fiber.Ctx) error {
 	span, spanCtx := apm.StartSpan(ctx.Context(), "Logout", "controller")
 	defer span.End()
@@ -130,6 +153,12 @@ func Logout(ctx *fiber.Ctx) error {
 	return response.SendSuccessResponse(ctx, fiber.StatusOK)
 }
 
+// @Description Refresh Token
+// @Tags        User Authentication
+// @Param Authorization header string true "Bearer token" default(Bearer <token>)
+// @Success     200 {object} object{token=string}
+// @Failure		500 {object} response.Response
+// @Router      /user/v1/refresh-token [put]
 func RefreshToken(ctx *fiber.Ctx) error {
 	span, spanCtx := apm.StartSpan(ctx.Context(), "RefreshToken", "controller")
 	defer span.End()

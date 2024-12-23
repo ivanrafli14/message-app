@@ -81,3 +81,19 @@
 2024/11/11 13:43:43 successfully connected to mongoDB
 2024/11/11 13:43:44 failed to listen: listen tcp4 0.0.0.0:9000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
 2024/11/11 13:44:31 successfully connected to mongoDB
+2024/12/22 20:14:56 successfully connected to mongoDB
+2024/12/22 20:14:58 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/12/22 20:17:22 successfully connected to mongoDB
+2024/12/22 20:30:47 successfully connected to mongoDB
+2024/12/22 20:34:51 successfully connected to mongoDB
+2024/12/22 20:37:16 successfully connected to mongoDB
+2024/12/22 20:37:57 successfully connected to mongoDB
+2024/12/22 20:38:27 successfully connected to mongoDB
+2024/12/22 20:41:03 successfully connected to mongoDB
+2024/12/22 21:54:19 successfully connected to mongoDB
+2024/12/23 09:27:34 successfully connected to mongoDB
+2024/12/23 09:27:35 failed to listen: listen tcp4 0.0.0.0:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/12/23 09:29:36 successfully connected to mongoDB
+2024/12/23 09:30:19 successfully connected to mongoDB
+2024/12/23 09:31:26 successfully connected to mongoDB
+2024/12/23 09:32:55 successfully connected to mongoDB

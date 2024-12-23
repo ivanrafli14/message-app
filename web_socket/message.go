@@ -13,11 +13,18 @@ import (
 	"time"
 )
 
+// @Description Send a message
+// @Tags        Message
+// @Param 		Authorization header string true "Bearer token" default(Bearer <token>)
+// @Param       body body models.MessagePayload true "Message Payload"
+// @Success 200 {object} models.MessagePayload
+// @Failure		500 {object} response.Response
+// @Router      /message/v1/send [post]
 func ServeWSMessaging(app *fiber.App) {
 	var clients = make(map[*websocket.Conn]bool)
 	var broadcast = make(chan models.MessagePayload)
 
-	app.Get("/message/v1/send", websocket.New(func(c *websocket.Conn) {
+	app.Post("/message/v1/send", websocket.New(func(c *websocket.Conn) {
 		defer func() {
 			c.Close()
 			delete(clients, c)

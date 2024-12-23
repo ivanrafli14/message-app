@@ -5,7 +5,9 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/monitor"
 	"github.com/gofiber/fiber/v2/middleware/recover"
+	"github.com/gofiber/swagger"
 	"github.com/gofiber/template/html/v2"
+	_ "github.com/ivanrafli14/fast-campus/message-app/docs"
 	"github.com/ivanrafli14/fast-campus/message-app/pkg/database"
 	"github.com/ivanrafli14/fast-campus/message-app/pkg/env"
 	"github.com/ivanrafli14/fast-campus/message-app/pkg/router"
@@ -25,10 +27,13 @@ func NewApplication() *fiber.App {
 	database.SetupMongoDB()
 	engine := html.New("./views", ".html")
 	app := fiber.New(fiber.Config{Views: engine})
+
 	app.Use(recover.New())
 	app.Use(logger.New())
-	app.Get("/dashboard", monitor.New())
 
+	app.Get("/dashboard", monitor.New())
+	app.Get("/swagger/*", swagger.HandlerDefault)
+	app.Static("/docs", "./docs")
 	go web_socket.ServeWSMessaging(app)
 
 	router.InstallRouter(app)

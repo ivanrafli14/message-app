@@ -8,6 +8,12 @@ import (
 	"log"
 )
 
+// @Description Get All Messsage History
+// @Tags        Message
+// @Param 		Authorization header string true "Bearer token" default(Bearer <token>)
+// @Success 200 {array} models.MessagePayload
+// @Failure		500 {object} response.Response
+// @Router      /message/v1/history [get]
 func GetHistory(ctx *fiber.Ctx) error {
 	span, spanCtx := apm.StartSpan(ctx.Context(), "GetHistory", "controller")
 	defer span.End()
